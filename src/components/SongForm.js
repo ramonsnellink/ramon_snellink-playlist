@@ -24,13 +24,13 @@ const SongForm = (props) => {
         onChange={handleInputChange}
         value={values.artist}
       />
-      <select name="genre" id="" onChange={handleInputChange}>
+      <select name="genre" id="" onChange={handleInputChange} value={values.genre}>
         <option value="none"></option>
         <option value="jazz">Jazz</option>
         <option value="rock">Rock</option>
         <option value="trance">Trance</option>
       </select>
-      <select name="rating" id="" onChange={handleInputChange}>
+      <select name="rating" id="" onChange={handleInputChange} value={values.rating}>
         <option value={"0"}></option>
         <option value="1">1</option>
         <option value="2">2</option>

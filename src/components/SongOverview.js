@@ -3,13 +3,17 @@ import SongForm from "./SongForm";
 import SongList from "./SongList";
 
 const SongOverview = () => {
-  const [songs, setSongs] = useState();
+  const [songs, setSongs] = useState([]);
 
   const addSong = (e, song) => {
     e.preventDefault();
     // doe iets om de state aan te passen
     console.log("values", song);
-    setSongs({ ...songs, song }); // hier moet ik het in een array stoppen.
+    const songId = songs.length + 1;
+
+    song = { ...song, id: songId };
+    // song.id = songs.length + 1;
+    setSongs([...songs, song]); // hier moet ik het in een array stoppen.
   };
 
   return (
@@ -25,7 +29,7 @@ const SongOverview = () => {
           </tr>
         </thead>
       </table>
-      {/* <SongList songs={this.state.songs} /> */}
+      <SongList songs={songs} />
 
       {console.log("Song list", songs)}
     </div>
