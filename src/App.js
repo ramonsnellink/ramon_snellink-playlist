@@ -1,11 +1,13 @@
-import "./App.css";
+import React from "react";
+import SongOverview from "./components/SongOverview";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <h1>App</h1>
+      <h1>Winc Lil' Liedjeslijst</h1>
+      <SongOverview />
     </div>
   );
-}
+};
 
 export default App;

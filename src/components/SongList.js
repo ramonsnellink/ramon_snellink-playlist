@@ -1,6 +1,6 @@
 import React from "react";
 
-const SongList = () => {
+const SongList = (props) => {
   return <h3>SongList</h3>;
 };
 

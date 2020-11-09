@@ -1,35 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import SongForm from "./SongForm";
 import SongList from "./SongList";
 
-class SongOverview extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      songs: [],
-    };
-  }
+const SongOverview = () => {
+  const [songs, setSongs] = useState();
 
-  addSong = (song) => {
+  const addSong = (e, song) => {
+    e.preventDefault();
     // doe iets om de state aan te passen
+    console.log("values", song);
+    setSongs({ ...songs, song }); // hier moet ik het in een array stoppen.
   };
 
-  render() {
-    return (
-      <div>
-        <SongForm addSong={this.addSong} />
-        <table>
+  return (
+    <div>
+      <SongForm addSong={addSong} />
+      <table>
+        <thead>
           <tr className="song-header">
             <th className="song-row__item">Song</th>
             <th className="song-row__item">Artist</th>
             <th className="song-row__item">Genre</th>
             <th className="song-row__item">Rating</th>
           </tr>
-        </table>
-        <SongList songs={this.state.songs} />
-      </div>
-    );
-  }
-}
+        </thead>
+      </table>
+      {/* <SongList songs={this.state.songs} /> */}
+
+      {console.log("Song list", songs)}
+    </div>
+  );
+};
 
 export default SongOverview;
