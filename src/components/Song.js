@@ -1,10 +1,10 @@
 const Song = ({ songData }) => {
   return (
-    <tr>
-      <td>{songData.title}</td>
-      <td>{songData.artist}</td>
-      <td>{songData.genre}</td>
-      <td>{songData.rating}</td>
+    <tr className="songlist__row">
+      <td className="songlist__item">{songData.title}</td>
+      <td className="songlist__item">{songData.artist}</td>
+      <td className="songlist__item">{songData.genre}</td>
+      <td className="songlist__item">{songData.rating}</td>
     </tr>
   );
 };

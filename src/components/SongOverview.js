@@ -15,13 +15,13 @@ const SongOverview = () => {
   return (
     <div>
       <SongForm addSong={addSong} />
-      <table>
+      <table className="songlist">
         <thead>
-          <tr className="song-header">
-            <th className="song-row__item">Song</th>
-            <th className="song-row__item">Artist</th>
-            <th className="song-row__item">Genre</th>
-            <th className="song-row__item">Rating</th>
+          <tr className="songlist__header">
+            <th className="songlist__title">Song</th>
+            <th className="songlist__title">Artist</th>
+            <th className="songlist__title">Genre</th>
+            <th className="songlist__title">Rating</th>
           </tr>
         </thead>
 

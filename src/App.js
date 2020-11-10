@@ -3,8 +3,8 @@ import SongOverview from "./components/SongOverview";
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>Winc Lil' Liedjeslijst</h1>
+    <div className="app">
+      <h1 className="app__title">Winc Lil' Liedjeslijst</h1>
       <SongOverview />
     </div>
   );
