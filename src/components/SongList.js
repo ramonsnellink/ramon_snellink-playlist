@@ -1,7 +1,11 @@
-import React from "react";
+import Song from "./Song";
 
 const SongList = (props) => {
-  return <h3>SongList</h3>;
+  const songListItems = props.songs.map((song) => {
+    return <Song songData={song} key={song.id} />;
+  });
+
+  return <tbody>{songListItems}</tbody>;
 };
 
 export default SongList;

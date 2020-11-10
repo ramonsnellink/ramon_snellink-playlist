@@ -7,12 +7,8 @@ const SongOverview = () => {
 
   const addSong = (e, song) => {
     e.preventDefault();
-    // doe iets om de state aan te passen
-    console.log("values", song);
     const songId = songs.length + 1;
-
-    song = { ...song, id: songId };
-    // song.id = songs.length + 1;
+    song = { ...song, id: songId }; // voeg een ID toe
     setSongs([...songs, song]); // hier moet ik het in een array stoppen.
   };
 
@@ -28,10 +24,9 @@ const SongOverview = () => {
             <th className="song-row__item">Rating</th>
           </tr>
         </thead>
-      </table>
-      <SongList songs={songs} />
 
-      {console.log("Song list", songs)}
+        <SongList songs={songs} />
+      </table>
     </div>
   );
 };
