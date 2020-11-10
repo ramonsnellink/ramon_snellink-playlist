@@ -14,6 +14,7 @@ const SongOverview = () => {
 
   return (
     <div>
+      <h1 className="songoverview__title">Winc Lil' Liedjeslijst</h1>
       <SongForm addSong={addSong} />
       <table className="songlist">
         <thead>
