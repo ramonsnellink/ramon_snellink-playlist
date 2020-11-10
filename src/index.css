@@ -137,15 +137,7 @@ table {
 body {
   font-family: "Raleway", sans-serif;
   background-color: #d5f2e2;
-}
-
-.app {
-  padding: 20px;
-}
-.app__title {
-  font-size: 3em;
-  text-align: center;
-  padding: 30px;
+  line-height: 2;
 }
 
 .songlist {
@@ -169,6 +161,7 @@ body {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
 }
+
 .songform {
   width: 100%;
   display: -webkit-box;
@@ -177,7 +170,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 20px;
+  padding: 20px 0px;
 }
 .songform__button {
   padding: 10px 30px;
@@ -193,5 +186,45 @@ body {
 .songform__field {
   padding: 5px;
   margin: 0px 5px;
+}
+
+.songoverview__title {
+  font-size: 3em;
+  text-align: center;
+  padding: 30px;
+}
+
+.about {
+  padding: 20px;
+}
+.about__title {
+  font-size: 3em;
+  text-align: center;
+  padding: 30px;
+}
+
+.nav {
+  background-color: white;
+}
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.nav__item {
+  padding: 20px;
+  color: black;
+}
+.nav__item a {
+  text-decoration: none;
+}
+.nav__item a:hover {
+  color: red;
+}
+.nav__item a:visited {
+  color: black;
 }
 /*# sourceMappingURL=index.css.map */

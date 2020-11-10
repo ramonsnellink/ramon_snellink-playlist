@@ -3,22 +3,19 @@
 /* Color Theme Swatches in Hex */
 $fel-donkergroen: #15bf70;
 $fel-midgroen: #14a662;
-$midgroen: #56bf8e;
 $fel-lichtgroen: #8fd9b6;
 $lichtgroen: #d5f2e2;
+
+@mixin title {
+  font-size: 3em;
+  text-align: center;
+  padding: 30px;
+}
 
 body {
   font-family: "Raleway", sans-serif;
   background-color: $lichtgroen;
-}
-
-.app {
-  padding: 20px;
-  &__title {
-    font-size: 3em;
-    text-align: center;
-    padding: 30px;
-  }
+  line-height: 2;
 }
 
 .songlist {
@@ -44,16 +41,13 @@ body {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
   }
-
-  &__item {
-  }
 }
 
 .songform {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 20px 0px;
 
   &__button {
     padding: 10px 30px;
@@ -69,5 +63,39 @@ body {
   &__field {
     padding: 5px;
     margin: 0px 5px;
+  }
+}
+
+.songoverview__title {
+  @include title;
+}
+.about {
+  padding: 20px;
+  &__title {
+    @include title;
+  }
+}
+
+.nav {
+  background-color: white;
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    padding: 20px;
+    color: black;
+
+    & a {
+      text-decoration: none;
+
+      &:hover {
+        color: red;
+      }
+      &:visited {
+        color: black;
+      }
+    }
   }
 }

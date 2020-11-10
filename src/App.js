@@ -1,12 +1,24 @@
 import React from "react";
 import SongOverview from "./components/SongOverview";
+import NavBar from "./components/NavBar";
+import About from "./components/About";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <div className="app">
-      <h1 className="app__title">Winc Lil' Liedjeslijst</h1>
-      <SongOverview />
-    </div>
+    <Router>
+      <div className="app">
+        <NavBar />
+        <Switch>
+          <Route exact path="/">
+            <SongOverview />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 };
 
