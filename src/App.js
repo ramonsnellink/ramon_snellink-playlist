@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
   return (
+    // note to self: links (via NavBar) must be INSIDE the Router component
     <Router>
       <div className="app">
         <NavBar />
